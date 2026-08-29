@@ -5845,12 +5845,8 @@ button:active:not(:focus-visible),
 }
 
 @media (max-width: 640px) {
-  .nav-brand {
+  .header-actions .text-button:not(:first-child) {
     display: none;
-  }
-
-  .site-header {
-    justify-content: flex-end;
   }
 
   .hero h1,
