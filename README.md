@@ -1,10 +1,15 @@
-# Grok Bot for Datadog GTM
+# Rippling x SpaceXAI
 
-Passworded site. Grok Bot from SpaceXAI, for Datadog GTM.
+Private GTM leave-behind for Rippling. The site shows how a fleet of Grok Bot agents can work across sales tools while each seller keeps the review point.
 
-## What it is
+The page keeps the original customer-demo architecture:
 
-Three GTM jobs on one page. Each job has a short problem statement, an interactive Grok Bot demo, and the matching Krista Letz clips under that demo. Below that: a light index of the clips and the public Grok Bot quote wall.
+- Next.js 15.5 App Router under `src/`
+- Geist type
+- vgpu hero telemetry
+- Password-protected pages and media
+- Interactive chat and computer demos
+- Sourced Grok Bot quote wall
 
 ## Run locally
 
@@ -14,18 +19,16 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Default password is `land2expand` (override with `SITE_PASSWORD`).
+Open [http://localhost:3000](http://localhost:3000). The local password is `land2expand`. Set `SITE_PASSWORD` to override it.
 
-## Krista clips
+## Brand
 
-Download into `private/media/krista-clips/` from the GitHub release (served only through the passworded `/api/media/...` route):
+The Rippling wordmark comes from the official [Rippling press kit](https://www.rippling.com/company/press). SpaceXAI uses the provided product wordmark.
 
-```bash
-gh release download krista-gtm-clips-720p-2026-08-26 \
-  --repo Speediing/grok-bot-quotes \
-  --dir private/media/krista-clips
-```
+## Media
+
+Private clips live under `private/media/krista-clips/`. The app serves them through the password-protected `/api/media/...` route.
 
 ## Deploy
 
-Preview only under the `jasonwiker` Vercel team, project name `datadog-cro`. Set `SITE_PASSWORD=land2expand`. Do not promote to a public production domain until Jason says so.
+The production target is `rippling-grokbot.vercel.app` under the `jasonwiker` Vercel scope. Set `SITE_PASSWORD=land2expand` in that project before deployment.
