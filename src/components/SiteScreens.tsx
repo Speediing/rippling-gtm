@@ -135,7 +135,7 @@ function GranolaScreen() {
       <p className="site-time">Still on the call. Approved notes only.</p>
       <ul>
         <li>
-          <span>Context</span> HR and IT are reviewing the current employee
+          <span>Context</span> HRIS and IT are reviewing the current employee
           handoff.
         </li>
         <li>
@@ -225,7 +225,7 @@ function GongScreen({ account }: { account: string }) {
       <div className="gong-recap">
         <h4>Call recap</h4>
         <ul>
-          <li>HR and IT owners joined the working session</li>
+          <li>HRIS and IT owners joined the working session</li>
           <li>The current employee handoff is mapped</li>
           <li>One access question remains open</li>
           <li>The next process review still needs a date</li>
@@ -250,10 +250,10 @@ function SfdcAccountScreen({ account }: { account: string }) {
       <dl className="sfdc-fields">
         <div>
           <dt>Current work</dt>
-          <dd>Separate HR and IT handoffs</dd>
+          <dd>Separate HRIS and IT handoffs</dd>
         </div>
         <div>
-          <dt>HR owner</dt>
+          <dt>People owner</dt>
           <dd>Confirmed</dd>
         </div>
         <div>
@@ -276,24 +276,24 @@ function SfdcAccountScreen({ account }: { account: string }) {
         </thead>
         <tbody>
           <tr>
-            <td>Employee record</td>
-            <td>HR owner</td>
+            <td>HRIS</td>
+            <td>People owner</td>
             <td>Review</td>
           </tr>
           <tr>
-            <td>Device handoff</td>
+            <td>IT</td>
             <td>IT owner</td>
             <td>Open</td>
           </tr>
           <tr>
-            <td>Payroll handoff</td>
-            <td>HR owner</td>
+            <td>payroll</td>
+            <td>Payroll owner</td>
             <td>Open</td>
           </tr>
           <tr>
-            <td>Process review</td>
-            <td>Customer team</td>
-            <td>Needs a date</td>
+            <td>spend</td>
+            <td>Spend owner</td>
+            <td>Open</td>
           </tr>
         </tbody>
       </table>
@@ -356,9 +356,7 @@ function SheetsScreen({
   const rows = table
     ? table.rows
     : [
-        [account, "HR owner", "IT owner", "Employee record", "Process review"],
-        ["Example account B", "HR owner", "IT owner", "Payroll handoff", "Open"],
-        ["Example account C", "HR owner", "IT owner", "Device handoff", "Open"],
+        [account, "People owner", "IT owner", "HRIS and IT", "Process review"],
       ];
   const cols = table
     ? table.columns
@@ -369,7 +367,7 @@ function SheetsScreen({
       <header>
         <span className="sheets-mark">Sheets</span>
         <strong>
-          {table ? `${account} next 90 days` : "5 accounts x 5 prospects"}
+          {table ? `${account} next 90 days` : "Acme pipeline review"}
         </strong>
       </header>
       <table>
@@ -517,7 +515,7 @@ function ResearchScreen({ account }: { account: string }) {
           <span>Company site</span> Public product and company context attached.
         </li>
         <li>
-          <span>Careers</span> Roles that touch HR and IT operations are grouped
+          <span>Careers</span> Roles that touch HRIS and IT operations are grouped
           for review.
         </li>
         <li>

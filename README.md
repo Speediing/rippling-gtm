@@ -1,6 +1,6 @@
 # Rippling x SpaceXAI
 
-Private GTM leave-behind for Rippling. The site shows how a fleet of Grok Bot agents can work across sales tools while each seller keeps the review point.
+Private GTM leave-behind for Rippling. The site shows how Grok Bot can work across sales tools while each rep keeps the review point.
 
 The page keeps the original customer-demo architecture:
 
@@ -19,7 +19,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The local password is `land2expand`. Set `SITE_PASSWORD` to override it.
+Open [http://localhost:3000](http://localhost:3000). Configure `SITE_PASSWORD` in `.env.local` before signing in.
 
 ## Brand
 
@@ -28,7 +28,3 @@ The Rippling wordmark comes from the official [Rippling press kit](https://www.r
 ## Media
 
 Private clips live under `private/media/krista-clips/`. The app serves them through the password-protected `/api/media/...` route.
-
-## Deploy
-
-The production target is `rippling-grokbot.vercel.app` under the `jasonwiker` Vercel scope. Set `SITE_PASSWORD=land2expand` in that project before deployment.

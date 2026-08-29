@@ -174,7 +174,7 @@ export function HeroDemo() {
           </div>
           <footer className="hero-phone-composer composer">
             <span aria-hidden>+</span>
-            <p>Message {job.agent} Agent</p>
+            <p>Message {job.agent}</p>
             <span aria-hidden>◉</span>
           </footer>
         </div>

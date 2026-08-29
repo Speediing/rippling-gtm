@@ -5,7 +5,7 @@ export const EXAMPLE_DECK_SLIDES: SlideCard[] = [
     n: 1,
     kicker: "Meeting map",
     title: "One employee event",
-    body: "Map where a hire starts separate work across HR, Payroll, and IT.",
+    body: "Map where a hire starts separate work across HRIS, payroll, and IT.",
   },
   {
     n: 2,
@@ -17,18 +17,18 @@ export const EXAMPLE_DECK_SLIDES: SlideCard[] = [
     n: 3,
     kicker: "Next step",
     title: "Review the current process",
-    body: "Bring the HR and IT owners together to confirm the handoffs.",
+    body: "Bring the HRIS and IT owners together to confirm the handoffs.",
   },
 ];
 
 const MEETING_PACK: Extract<Artifact, { kind: "one-pager" }> = {
   kind: "one-pager",
-  title: "Example account meeting pack",
+  title: "Acme meeting pack",
   eyebrow: "Ready for review",
   sections: [
     {
       heading: "Current process",
-      body: "A new hire starts separate work across HR, Payroll, and IT.",
+      body: "A new hire starts separate work across HRIS, payroll, and IT.",
     },
     {
       heading: "Rippling point of view",
@@ -36,7 +36,7 @@ const MEETING_PACK: Extract<Artifact, { kind: "one-pager" }> = {
     },
     {
       heading: "Next meeting",
-      body: "Review the handoffs with the HR and IT owners before choosing a starting point.",
+      body: "Review the handoffs with the HRIS and IT owners before choosing a starting point.",
     },
   ],
 };
@@ -45,18 +45,18 @@ const SOURCED_REPLY: Extract<Artifact, { kind: "gmail" }> = {
   kind: "gmail",
   title: "Sourced buyer reply",
   to: "Customer team",
-  subject: "How HR and IT can work from one employee record",
-  body: "Rippling connects HR, Payroll, IT, and Finance products on one platform. The draft below links each answer to approved product material. Please review it before sending.",
+  subject: "How HRIS and IT can work from one employee record",
+  body: "Rippling connects HRIS, payroll, IT, and spend on one platform. The draft below links each answer to approved product material. Please review it before sending.",
 };
 
 const ACCOUNT_BRIEF: Extract<Artifact, { kind: "one-pager" }> = {
   kind: "one-pager",
-  title: "Example account brief",
+  title: "Acme account brief",
   eyebrow: "Draft only",
   sections: [
     {
       heading: "What is public",
-      body: "The company site and open roles show where HR and IT work may overlap.",
+      body: "The company site and open roles show where HRIS and IT work may overlap.",
     },
     {
       heading: "Working idea",
@@ -73,7 +73,7 @@ export const JOBS: CroJob[] = [
   {
     id: "live-deck",
     number: 1,
-    title: "Update the room while it is live",
+    title: "Update decks in real time",
     trigger: "A customer call starts",
     backgroundAction: "following approved notes and updating the open meeting pack",
     problem:
@@ -87,10 +87,9 @@ export const JOBS: CroJob[] = [
         scene: "call",
         visual: {
           kind: "live-call",
-          title: "Example account working session",
+          title: "Acme working session",
           people: [
-            { initials: "YOU", name: "Seller" },
-            { initials: "HR", name: "HR lead" },
+            { initials: "PO", name: "People lead" },
             { initials: "IT", name: "IT lead" },
           ],
         },
@@ -103,7 +102,7 @@ export const JOBS: CroJob[] = [
           kind: "deck-update",
           eyebrow: "Live call map",
           headline: "One employee event. Separate handoffs.",
-          product: "HR, Payroll, and IT",
+          product: "HRIS, payroll, and IT",
           status: "Current process mapped",
         },
       },
@@ -135,10 +134,10 @@ export const JOBS: CroJob[] = [
       title: "Room",
       subtitle: "Approved notes to meeting pack",
       participants: [
-        { id: "you", name: "You", role: "you" },
+        { id: "you", name: "Rippling rep", role: "you" },
         {
           id: "room",
-          name: "Room",
+          name: "Grok Bot",
           role: "bot",
           persona: "Turns the live process map into a reviewable meeting pack",
           color: "#79005D",
@@ -155,7 +154,7 @@ export const JOBS: CroJob[] = [
           id: "m2",
           from: "room",
           kind: "text",
-          body: "The discussion now covers the handoff between HR, Payroll, and IT. I am mapping the current process in the open deck.",
+          body: "The discussion now covers the handoff between HRIS, payroll, and IT. I am mapping the current process in the open deck.",
         },
         {
           id: "m3",
@@ -176,7 +175,7 @@ export const JOBS: CroJob[] = [
   {
     id: "sourced-answer",
     number: 2,
-    title: "Answer the buyer without an internal chase",
+    title: "Find product and internal answers fast",
     trigger: "A customer question lands",
     backgroundAction: "checking approved product material and drafting a sourced reply",
     problem:
@@ -186,7 +185,7 @@ export const JOBS: CroJob[] = [
     storyboard: [
       {
         when: "Question arrives",
-        label: "A buyer asks how HR and IT can share one employee record.",
+        label: "A buyer asks how HRIS and IT can share one employee record.",
         scene: "notes",
         visual: {
           kind: "procurement-email",
@@ -216,7 +215,7 @@ export const JOBS: CroJob[] = [
         visual: {
           kind: "reply-ready",
           to: "Customer team",
-          subject: "How HR and IT can work from one employee record",
+          subject: "How HRIS and IT can work from one employee record",
           status: "Reply ready",
         },
         artifact: SOURCED_REPLY,
@@ -231,10 +230,10 @@ export const JOBS: CroJob[] = [
       title: "Answers",
       subtitle: "Buyer question to sourced draft",
       participants: [
-        { id: "you", name: "You", role: "you" },
+        { id: "you", name: "Rippling rep", role: "you" },
         {
           id: "answers",
-          name: "Answers",
+          name: "Grok Bot",
           role: "bot",
           persona: "Checks approved product material and drafts a sourced reply",
           color: "#D6A4C8",
@@ -280,7 +279,7 @@ export const JOBS: CroJob[] = [
   {
     id: "account-research",
     number: 3,
-    title: "Build the account brief before outreach",
+    title: "Pipeline generation is now easier than ever",
     trigger: "An account enters the target list",
     backgroundAction: "reading public sources and preparing a narrow account brief",
     problem:
@@ -294,9 +293,9 @@ export const JOBS: CroJob[] = [
         scene: "inspect",
         visual: {
           kind: "account-research",
-          account: "Example account",
+          account: "Acme",
           sources: ["Company site", "Careers", "Newsroom"],
-          signal: "HR and IT work may overlap",
+          signal: "HRIS and IT work may overlap",
         },
       },
       {
@@ -339,10 +338,10 @@ export const JOBS: CroJob[] = [
       title: "Research",
       subtitle: "Public sources to account brief",
       participants: [
-        { id: "you", name: "You", role: "you" },
+        { id: "you", name: "Rippling rep", role: "you" },
         {
           id: "research",
-          name: "Research",
+          name: "Grok Bot",
           role: "bot",
           persona: "Reads public sources and prepares the account brief",
           color: "#402530",
@@ -353,13 +352,13 @@ export const JOBS: CroJob[] = [
           id: "m1",
           from: "research",
           kind: "routine",
-          body: "Example account entered the target list. I am reading approved public sources and keeping facts separate from the working idea.",
+          body: "Acme entered the target list. I am reading approved public sources and keeping facts separate from the working idea.",
         },
         {
           id: "m2",
           from: "research",
           kind: "text",
-          body: "The company site and careers page point to work shared by HR and IT. I am drafting one process question, not making a claim.",
+          body: "The company site and careers page point to work shared by HRIS and IT. I am drafting one process question, not making a claim.",
         },
         {
           id: "m3",
@@ -377,8 +376,8 @@ export const JOBS: CroJob[] = [
             kind: "gmail",
             title: "First outreach",
             to: "Customer team",
-            subject: "A question about the HR and IT handoff",
-            body: "I noticed your public roles touch both HR and IT operations. How does a new hire move between those teams today? I put the short context in one page if useful.",
+            subject: "A question about the HRIS and IT handoff",
+            body: "I noticed your public roles touch both HRIS and IT operations. How does a new hire move between those teams today? I put the short context in one page if useful.",
           },
         },
         {

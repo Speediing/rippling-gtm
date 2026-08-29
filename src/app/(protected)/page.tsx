@@ -13,7 +13,7 @@ export default function HomePage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="hero-watercolor-image"
-          src="/brand/watercolor-pad.png"
+          src="/brand/rippling-unified-platform.png"
           alt=""
         />
         <SiteNav />
@@ -61,7 +61,7 @@ export default function HomePage() {
 
       <div className="orbit-break" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/brand/watercolor-orbit.png" alt="" />
+        <img src="/brand/rippling-orbit.png" alt="" />
       </div>
 
       <div className="report">

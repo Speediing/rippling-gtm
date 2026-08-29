@@ -1,7 +1,7 @@
 export const AUTH_COOKIE = "rippling_gtm_session";
 
 export function sitePassword(): string {
-  return process.env.SITE_PASSWORD || "land2expand";
+  return process.env.SITE_PASSWORD?.trim() || "";
 }
 
 function toHex(buffer: ArrayBuffer): string {
@@ -33,6 +33,7 @@ export async function isValidSession(
 
 export function passwordMatches(input: string): boolean {
   const expected = sitePassword();
+  if (!expected) return false;
   if (input.length !== expected.length) return false;
   let mismatch = 0;
   for (let i = 0; i < input.length; i += 1) {

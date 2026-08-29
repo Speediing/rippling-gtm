@@ -35,39 +35,39 @@ const granola = { id: "granola", host: "granola.app", label: "Granola" };
 const figma = { id: "figma", host: "figma.com", label: "Figma" };
 const gmail = { id: "gmail", host: "mail.google.com", label: "Gmail" };
 const gdoc = { id: "gdoc", host: "docs.google.com", label: "Docs" };
-const web = { id: "web", host: "example.com", label: "Public site" };
+const web = { id: "web", host: "acme.com", label: "Public site" };
 
 export const SCREENS: Record<JobId, Record<string, ComputerBeat>> = {
   "live-deck": {
     m1: {
       pill: "Opening the approved notes",
       host: "granola.app",
-      path: "/notes/example-working-session",
-      title: "Example account working session",
+      path: "/notes/acme-working-session",
+      title: "Acme working session",
       site: "granola",
       tabs: [granola, figma, gmail],
     },
     m2: {
       pill: "Mapping the current process",
       host: "granola.app",
-      path: "/notes/example-working-session",
-      title: "Example account working session",
+      path: "/notes/acme-working-session",
+      title: "Acme working session",
       site: "granola",
       tabs: [granola, figma, gmail],
     },
     m3: {
       pill: "Updating the meeting pack",
       host: "figma.com",
-      path: "/file/example-meeting-pack",
-      title: "Example account meeting pack",
+      path: "/file/acme-meeting-pack",
+      title: "Acme meeting pack",
       site: "figma",
       tabs: [granola, figma, gmail],
     },
     m4: {
       pill: "Holding the draft for review",
       host: "figma.com",
-      path: "/file/example-meeting-pack",
-      title: "Example account meeting pack",
+      path: "/file/acme-meeting-pack",
+      title: "Acme meeting pack",
       site: "figma",
       tabs: [granola, figma, gmail],
     },
@@ -109,17 +109,17 @@ export const SCREENS: Record<JobId, Record<string, ComputerBeat>> = {
   "account-research": {
     m1: {
       pill: "Reading approved public sources",
-      host: "example.com",
+      host: "acme.com",
       path: "/",
-      title: "Example account",
+      title: "Acme",
       site: "research",
       tabs: [web, gdoc, gmail],
     },
     m2: {
       pill: "Separating facts from the working idea",
-      host: "example.com",
+      host: "acme.com",
       path: "/careers",
-      title: "Example account careers",
+      title: "Acme careers",
       site: "clip",
       clip: "02-prospecting-pg",
       tabs: [web, gdoc, gmail],
@@ -127,8 +127,8 @@ export const SCREENS: Record<JobId, Record<string, ComputerBeat>> = {
     m3: {
       pill: "Writing the account brief",
       host: "docs.google.com",
-      path: "/document/d/example-account-brief",
-      title: "Example account brief",
+      path: "/document/d/acme-account-brief",
+      title: "Acme account brief",
       site: "gdoc",
       tabs: [web, gdoc, gmail],
     },

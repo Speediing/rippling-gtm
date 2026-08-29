@@ -37,29 +37,29 @@ export type HeroJob = {
 export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
   "target-account-research": {
     label: "Target-account research",
-    agent: "Research",
-    trigger: "Example account enters the target list",
-    account: "Example account",
+    agent: "Grok Bot",
+    trigger: "Acme enters the target list",
+    account: "Acme",
     context: "Public site and careers page",
-    signal: "Public roles touch both HR and IT operations",
+    signal: "Public roles touch both HRIS and IT operations",
     artifact: "Account brief",
     thread: [
       {
         sender: "user",
-        body: "Example account just hit the list. Research it and leave me a brief.",
+        body: "Acme just hit the list. Research it and leave me a brief.",
       },
       {
         sender: "bot",
-        body: "Account brief is ready. Careers page asks for HR and IT on one platform. Draft only.",
+        body: "Account brief is ready. Careers page points to HRIS and IT on one platform. Draft only.",
       },
     ],
   },
   "account-brief": {
     label: "Account brief",
-    agent: "Brief",
-    trigger: "You open Example account before outreach",
-    account: "Example account",
-    context: "HR, Payroll, IT, and Finance on one employee graph",
+    agent: "Grok Bot",
+    trigger: "You open Acme before outreach",
+    account: "Acme",
+    context: "HRIS, payroll, IT, and spend on one employee graph",
     signal: "The brief starts with one process question",
     artifact: "Account brief",
     thread: [
@@ -69,16 +69,16 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
       },
       {
         sender: "bot",
-        body: "Account brief is parked. One employee graph across HR, Payroll, IT, and Finance. Nothing sent.",
+        body: "Account brief is parked. One employee graph across HRIS, payroll, IT, and spend. Nothing sent.",
       },
     ],
   },
   "meeting-prep": {
     label: "Meeting prep",
-    agent: "Prep",
+    agent: "Grok Bot",
     trigger: "Tomorrow's meeting appears on the calendar",
-    account: "Example account",
-    context: "Agenda covers the HR and IT handoff",
+    account: "Acme",
+    context: "Agenda covers the HRIS and IT handoff",
     signal: "The meeting brief keeps open questions at the top",
     artifact: "Meeting brief",
     thread: [
@@ -94,9 +94,9 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
   },
   "live-deck-update": {
     label: "Live deck update",
-    agent: "Slides",
+    agent: "Grok Bot",
     trigger: "The customer call starts",
-    account: "Example account",
+    account: "Acme",
     context: "Live discovery. Granola is in.",
     signal: "Approved notes map the payroll and IT handoff",
     artifact: "Updated slides",
@@ -113,10 +113,10 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
   },
   "follow-up-pack": {
     label: "Follow-up pack",
-    agent: "Follow-up",
+    agent: "Grok Bot",
     trigger: "The call ends",
-    account: "Example account",
-    context: "Same-day follow-up for IT and HR",
+    account: "Acme",
+    context: "Same-day follow-up for IT and HRIS",
     signal: "Next meeting needs both owners in the room",
     artifact: "Follow-up pack",
     thread: [
@@ -132,16 +132,16 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
   },
   "sourced-buyer-answer": {
     label: "Sourced buyer answer",
-    agent: "Answers",
+    agent: "Grok Bot",
     trigger: "A buyer question lands overnight",
-    account: "Example account",
+    account: "Acme",
     context: "Inbox. Product knowledge and internal notes.",
-    signal: "How Payroll and IT share one employee record",
+    signal: "How payroll and IT share one employee record",
     artifact: "Sourced reply",
     thread: [
       {
         sender: "user",
-        body: "They asked how Payroll and IT share one record. Find the answer and draft the reply.",
+        body: "They asked how payroll and IT share one record. Find the answer and draft the reply.",
       },
       {
         sender: "bot",
@@ -151,11 +151,11 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
   },
   "deal-room-review": {
     label: "Deal-room review",
-    agent: "Deal room",
+    agent: "Grok Bot",
     trigger: "You open the deal room before forecast",
-    account: "Example account",
-    context: "Open deal. HR, IT, and Finance owners.",
-    signal: "IT owner is on the thread. Finance owner is not.",
+    account: "Acme",
+    context: "Open deal. HRIS, IT, and spend owners.",
+    signal: "IT owner is on the thread. Spend owner is not.",
     artifact: "Open-issues list",
     thread: [
       {
@@ -164,22 +164,22 @@ export const HERO_JOBS: { readonly [K in HeroJobId]: HeroJob } = {
       },
       {
         sender: "bot",
-        body: "Open-issues list is ready. Finance owner is missing. Access question is unanswered. Draft only.",
+        body: "Open-issues list is ready. Spend owner is missing. Access question is unanswered. Draft only.",
       },
     ],
   },
   "forecast-review": {
     label: "Forecast review",
-    agent: "Forecast",
+    agent: "Grok Bot",
     trigger: "Weekly forecast review starts",
-    account: "Example account",
+    account: "Acme",
     context: "This week's commit conversation",
     signal: "Next step is dated. Signer meeting is not.",
     artifact: "Forecast note",
     thread: [
       {
         sender: "user",
-        body: "Write the forecast note for Example account. Gaps only. No numbers.",
+        body: "Write the forecast note for Acme. Gaps only. No numbers.",
       },
       {
         sender: "bot",
